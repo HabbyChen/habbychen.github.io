@@ -6,32 +6,14 @@
     <description>Recent content on habbychen的技术笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 15 Feb 2022 14:06:35 +0800</lastBuildDate><atom:link href="https://habbychen.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Feb 2022 17:08:52 +0800</lastBuildDate><atom:link href="https://habbychen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>我爱我家哇啦啦</title>
-      <link>https://habbychen.github.io/post/linux/linux01/</link>
-      <pubDate>Tue, 15 Feb 2022 14:06:35 +0800</pubDate>
+      <title>Hugo美化url</title>
+      <link>https://habbychen.github.io/%E9%9A%8F%E7%AC%94/Hugo%E7%BE%8E%E5%8C%96url/</link>
+      <pubDate>Tue, 15 Feb 2022 17:08:52 +0800</pubDate>
       
-      <guid>https://habbychen.github.io/post/linux/linux01/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://habbychen.github.io/post/hello-world/</link>
-      <pubDate>Tue, 15 Feb 2022 13:51:10 +0800</pubDate>
-      
-      <guid>https://habbychen.github.io/post/hello-world/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>一加一等于机</title>
-      <link>https://habbychen.github.io/post/linux01/</link>
-      <pubDate>Tue, 15 Feb 2022 13:51:10 +0800</pubDate>
-      
-      <guid>https://habbychen.github.io/post/linux01/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <guid>https://habbychen.github.io/%E9%9A%8F%E7%AC%94/Hugo%E7%BE%8E%E5%8C%96url/</guid>
+      <description>Hugo美化url 用hugo直接生成github page的主题的时候链接非常的不美观，全是xxx.github.io/post/xxxx post这个层级实在让人讨厌 我试了用分类等，但是不支持，查询了官方的说明， https://www.gohugo.org/doc/extras/permalinks/ 这个标签可以使用，在默认的config.toml中可以有集中样式设置</description>
     </item>
     
     <item>
