@@ -192,17 +192,17 @@
 <p><a href="https://www.gohugo.org/doc/extras/permalinks/">https://www.gohugo.org/doc/extras/permalinks/</a></p>
 <p>这个标签可以使用，在默认的config.toml中可以有集中样式设置</p>
 <p>比如按照时间的：</p>
-<pre tabindex="0"><code>permalinks:
-  post: /:year/:month/:title/
-</code></pre><p>或者按照slug的</p>
-<pre tabindex="0"><code>permalinks:
-  post: /:slug/:title/
-</code></pre><p>需要注意的是，如果说按照时间去处理链接，那么需要在文章的顶部添加</p>
-<pre tabindex="0"><code>date: 2022-02-15T17:08:52+08:00
-</code></pre><p>如此类的时间设置。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#000080">permalinks</span>:<span style="color:#bbb">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#bbb">  </span><span style="color:#000080">post</span>:<span style="color:#bbb"> </span>/:year/:month/:title/<span style="color:#bbb">
+</span></code></pre></div><p>或者按照slug的</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>permalinks:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  post: /:slug/:title/
+</code></pre></div><p>需要注意的是，如果说按照时间去处理链接，那么需要在文章的顶部添加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>date: 2022-02-15T17:08:52+08:00
+</code></pre></div><p>如此类的时间设置。</p>
 <p>如果使用了slug，则需要在头部添加</p>
-<pre tabindex="0"><code>slug: 随笔
-</code></pre><p>貌似permalinks可以做的东西很多，和其他参数在一起能起到不错的效果。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>slug: 随笔
+</code></pre></div><p>貌似permalinks可以做的东西很多，和其他参数在一起能起到不错的效果。</p>
 <p>但是我就只需要这样，就这样就好了吧。</p>
 
         </div>

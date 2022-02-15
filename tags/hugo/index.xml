@@ -13,7 +13,7 @@
       <pubDate>Tue, 15 Feb 2022 17:08:52 +0800</pubDate>
       
       <guid>https://habbychen.github.io/%E9%9A%8F%E7%AC%94/Hugo%E7%BE%8E%E5%8C%96url/</guid>
-      <description>用hugo直接生成github page的主题的时候链接非常的不美观，全是xxx.github.io/post/xxxx post这个层级实在让人讨厌 我试了用分类等，但是不支持，查询了官方的说明， https://www.gohugo.org/doc/extras/permalinks/ 这个标签可以使用，在默认的config.toml中可以有集中样式设置 比如按照时间的： permalinks:</description>
+      <description>用hugo直接生成github page的主题的时候链接非常的不美观，全是xxx.github.io/post/xxxx post这个层级实在让人讨厌 我试了用分类等，但是不支持，查询了官方的说明， https://www.gohugo.org/doc/extras/permalinks/ 这个标签可以使用，在默认的config.toml中可以有集中样式设置 比如按照时间的： 1</description>
     </item>
     
   </channel>
