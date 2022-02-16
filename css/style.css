@@ -103,6 +103,7 @@ pre, code {
     font-size:.92857em;
 }
 pre {
+    background: rgba(241, 241, 241, 0.77);
     overflow:auto;
     border: 1px solid #ddd;
     display: block;
@@ -111,20 +112,28 @@ code {
     display: inline-block;
 }
 blockquote {
+    margin: 1em 1.5em;
+    padding-left: 1.5em;
+    border-left: 4px solid #F3F3F0;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 40px;
     margin-inline-end: 40px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 2.5em 0;
-    padding: 0 0 0 50px;
-    color: #555;
-    border-left: none;
+    /*display: block;*/
+    /*margin-block-start: 1em;*/
+    /*margin-block-end: 1em;*/
+    /*margin-inline-start: 40px;*/
+    /*margin-inline-end: 40px;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+    /*margin: 2.5em 0;*/
+    /*padding: 0 0 0 50px;*/
+    /*color: #555;*/
+    /*border-left: none;*/
 }
 blockquote::before{
-    content: "\201C";
+    /*content: "\201C";*/
     display: block;
     font-family: times;
     font-style: normal;
@@ -177,11 +186,15 @@ textarea {
     border-bottom-color:transparent;
 }
 #header {
-    padding:58px 0 0;
+    padding:35px 0 0;
     text-align:left;
+    background: #fff url(../images/top.png) repeat-x bottom;
 }
 #header .col-group {
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
+}
+.site-name{
+    float: left;
 }
 .site-name h1{
     padding: 0;
@@ -191,9 +204,10 @@ textarea {
     /**
     font:bold 42px/1.12 "Times New Roman", Georgia, Times, sans-serif;
     **/
-    font-size: 37.5px;
+    font-size: 30px;
     font-weight: bold;
     color:#555;
+    line-height: 50px;
 }
 #logo span {
     color:#777;
@@ -204,11 +218,13 @@ textarea {
 .description {
     margin:5px 0 0;
     color:#999;
+    padding-bottom: 10px;
 }
 #nav-menu {
-    margin:10px 0 -1px;
+    /*margin:2px 0 -1px;*/
     padding:0;
     float:right;
+    line-height: 80px;
 }
 #nav-menu a {
     display:inline-block;
@@ -224,8 +240,8 @@ textarea {
 #nav-menu a:hover {
 }
 #nav-menu a.current {
-    border:1px solid #ddd;
-    border-bottom:1px solid #fff;
+    /*border:1px solid #ddd;*/
+    /*border-bottom:1px solid #fff;*/
 }
 .site-search {
     display:none;
@@ -263,13 +279,15 @@ textarea {
     margin:0 auto;
 }
 #secondary {
-    float:right;
-    width:245px;
-    border-left:1px solid #ddd;
-    padding-left:35px;
-    word-wrap:break-word;
-    display:block;
-    padding-top:40px;
+    float: right;
+    width: 245px;
+    /* border-left: 1px solid #ddd; */
+    padding-left: 20px;
+    word-wrap: break-word;
+    display: block;
+    padding-top: 10px;
+    background: rgba(241, 243, 245, 0.68);
+    margin-top: 25px;
 }
 #main {
     padding-top:20px;
@@ -277,6 +295,7 @@ textarea {
 }
 .post {
     padding:25px 0 15px;
+    font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
 }
 .post-title {
     margin:0;
@@ -287,7 +306,7 @@ textarea {
     font-weight: bold;
 }
 .post-title a, .keyword {
-    color:#555;
+    color:#666;
 }
 .post-meta {
     padding:0;
@@ -356,10 +375,11 @@ textarea {
     border-color: transparent #555 transparent transparent;
 }
 .post-content {
-    font-size: 1em;
-    line-height: 1.7;
-    color:#444;
+    font-size: 0.9em;
+    line-height: 2;
+    color:#555;
     padding-top:27px;
+    font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
 }
 .post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6 {
     color: #ba3925;
@@ -980,8 +1000,8 @@ img.alignright {
 
 /* read more*/
 .readmore a {
-    font-size: 14px;
-    color: #444;
+    font-size: 0.9em;
+    color: #555;
     margin: -10px 0;
     padding: 5px 10px;
     border: 1px solid #ddd;
