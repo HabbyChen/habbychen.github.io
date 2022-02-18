@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>关于我 on habbychen的技术笔记</title>
+    <link>https://9136347.com/tags/%E5%85%B3%E4%BA%8E%E6%88%91/</link>
+    <description>Recent content in 关于我 on habbychen的技术笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 15 Feb 2022 11:59:23 +0800</lastBuildDate><atom:link href="https://9136347.com/tags/%E5%85%B3%E4%BA%8E%E6%88%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>https://9136347.com/about/</link>
+      <pubDate>Tue, 15 Feb 2022 11:59:23 +0800</pubDate>
+      
+      <guid>https://9136347.com/about/</guid>
+      <description>一个入行十几年的程序员 什么都怎么深入 又什么都想玩一下 写了很多年的php 也会写点golang 喜欢玩游戏 但是玩得稀烂 唉 一不小心就把自己炼废了</description>
+    </item>
+    
+  </channel>
+</rss>
