@@ -6,7 +6,52 @@
     <description>Recent content in Tags on habbychen的技术笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Feb 2022 16:00:00 +0800</lastBuildDate><atom:link href="https://9136347.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Feb 2022 16:05:27 +0800</lastBuildDate><atom:link href="https://9136347.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>apisix</title>
+      <link>https://9136347.com/tags/apisix/</link>
+      <pubDate>Fri, 18 Feb 2022 16:05:27 +0800</pubDate>
+      
+      <guid>https://9136347.com/tags/apisix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>架构</title>
+      <link>https://9136347.com/tags/%E6%9E%B6%E6%9E%84/</link>
+      <pubDate>Fri, 18 Feb 2022 16:05:27 +0800</pubDate>
+      
+      <guid>https://9136347.com/tags/%E6%9E%B6%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网关分流</title>
+      <link>https://9136347.com/tags/%E7%BD%91%E5%85%B3%E5%88%86%E6%B5%81/</link>
+      <pubDate>Fri, 18 Feb 2022 16:05:27 +0800</pubDate>
+      
+      <guid>https://9136347.com/tags/%E7%BD%91%E5%85%B3%E5%88%86%E6%B5%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网关认证</title>
+      <link>https://9136347.com/tags/%E7%BD%91%E5%85%B3%E8%AE%A4%E8%AF%81/</link>
+      <pubDate>Fri, 18 Feb 2022 16:05:27 +0800</pubDate>
+      
+      <guid>https://9136347.com/tags/%E7%BD%91%E5%85%B3%E8%AE%A4%E8%AF%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网关鉴权</title>
+      <link>https://9136347.com/tags/%E7%BD%91%E5%85%B3%E9%89%B4%E6%9D%83/</link>
+      <pubDate>Fri, 18 Feb 2022 16:05:27 +0800</pubDate>
+      
+      <guid>https://9136347.com/tags/%E7%BD%91%E5%85%B3%E9%89%B4%E6%9D%83/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>golang</title>
       <link>https://9136347.com/tags/golang/</link>
