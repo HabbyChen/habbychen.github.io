@@ -68,13 +68,9 @@
 }
 body {
     background-color:#FFF;
-    color:#444;
+    color:#666;
     font-size: 15px;
-    /**
-    font-family:"TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
-    **/
-    /*font-family: "Iowan Old Style", "Ovo", "Hoefler Text", Georgia, "Times New Roman", "TIBch", "Source Han Sans", "PingFangSC-Regular", "Hiragino Sans GB", "STHeiti", "Microsoft Yahei", "Droid Sans Fallback", "WenQuanYi Micro Hei", sans-serif;*/
-    /**-webkit-font-smoothing: antialiased;**/
+
  
     -moz-osx-font-smoothing: grayscale;
     font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
@@ -114,8 +110,8 @@ code {
     display: inline-block;
 }
 blockquote {
-    margin: 1em 1.5em;
-    padding-left: 1em;
+    /*margin: 1em 1.5em;*/
+    padding: 1em;
     border-left: 4px solid #42B983;
     display: block;
     margin-block-start: 1em;
@@ -936,7 +932,9 @@ img.alignright {
 }
 .post-archive h2 {
       margin: 0;
-      font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif; 
+
+    font-weight: bold;
+    font-size: 20px;
 }
 .post-archive .date {
       padding-right: .7em; 
