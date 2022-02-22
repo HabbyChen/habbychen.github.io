@@ -69,7 +69,7 @@
 body {
     background-color:#FFF;
     color:#666;
-    font-size: 15px;
+    font-size: 1em;
 
  
     -moz-osx-font-smoothing: grayscale;
@@ -180,6 +180,11 @@ textarea {
 .post-content a, .comment-content a {
     color: #0789e0;
     border-bottom:1px solid #ddd;
+}
+.post-content .content-main {
+    color: #6E7173;
+    border-bottom:0;
+    /*font-size: 1.05em;*/
 }
 .post-meta a:hover, .post-content a:hover, .widget a:hover, .comment-content a {
     border-bottom-color:transparent;
@@ -613,10 +618,14 @@ textarea.textarea {
 .widget-list {
     list-style:none;
     padding:0;
+    word-break: break-all;
 }
 .widget-list li {
     margin:5px 0;
     line-height:1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .widget .tagcloud {
