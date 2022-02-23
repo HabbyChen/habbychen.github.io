@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>过度设计会扼杀你的产品 | habbychen的技术笔记</title>
+    <meta property="og:title" content="过度设计会扼杀你的产品 - habbychen的技术笔记">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2022-02-23T09:39:53&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-02-23T09:39:53&#43;08:00'>
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,java,android,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="过度设计会扼杀你的产品">
+        
+    <meta name="author" content="habby chen">
+    <meta property="og:url" content="https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1%E4%BC%9A%E6%89%BC%E6%9D%80%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://9136347.com">
+                        habbychen的技术笔记
+                    </a>
+                
+                <p class="description">想专注又专注不了golang、架构、python等</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://9136347.com">首页</a>
+                    
+                    <a  href="https://9136347.com/tags/" title="标签">标签</a>
+                    
+                    <a  href="https://9136347.com/categories/golang/" title="golang">golang</a>
+                    
+                    <a  href="https://9136347.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">过度设计会扼杀你的产品</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年2月23日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1'>架构设计</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>原文:https://www.infoq.cn/article/prA7KSYtE7YVuralm19g</p>
+<p>本文不只针对产品经理。创始人、投资者，或者任何其他在任何数字产品或服务方面有足够关系的人都可以利用本文的观点。</p>
+<p>我相信这一点，因为我们将讨论创建产品时最普遍的问题之一：过度设计产品。依我看，<strong>过度设计要比缺乏良好的开发实践扼杀更多的产品</strong>。</p>
+<p>在讨论详细情况之前，让我来介绍一下我的背景。当上产品经理之前，我是个工程师。实际上，我受过计算机科学的正规训练。尽管在我的职业生涯中，我总是更接近业务，而不是自己编写代码，但我创建、扩展并管理了工程和产品团队，而且规模相当。</p>
+<p>所以，我并不是从外表来谈论过度设计的问题。对于自己造成的这一切，我感到内疚，并且承受了这一切。由于这个原因，我知道了解它的重要性，知道它的代价，以及如何防止它。</p>
+<p><strong>什么是过度设计？</strong></p>
+<p>如果我们按照<a href="https://en.wikipedia.org/wiki/Overengineering">维基百科</a>的严格定义来看，过度设计指的是以超过必要的更复杂方式设计产品的事实：</p>
+<p><strong>过度设计</strong>（或<strong>过度工程化</strong>，或<strong>性能过剩</strong>）指的是以过于复杂的方式设计产品或提供问题的解决方案的行为，而在这种情况下，可以证明存在一种更简单的解决方案，其效率和效果与原始设计相同。</p>
+<p>就软件而言，我喜欢 <a href="https://solidstudio.io/blog/origin-of-overengineering">Paweł Głogowski</a> 的这个定义：</p>
+<p>解决你所没有的问题的代码或设计。</p>
+<p>如今，你会想，谁会设计或编程来解决一个他/她所没有的问题呢？这似乎很荒谬，是吧？嗯，请坐稳椅子，因为在经历了二十年的职业生涯之后，我可以向你保证，过度设计并非例外：这是常态。</p>
+<p><strong>过度设计的原因</strong></p>
+<p>谁也不是出于恶意这么做的。很多时候，过度设计发生的原因是<strong>我们试图预测未来</strong>，对未知的事物做好准备。</p>
+<p>在编写一个功能时，很容易想到，只要我们投入更多的时间，就能“以防万一”，使其经得住未来的考验。</p>
+<p>而现实是，十有八九，这个“以防万一”永远也不会到来。但是，在这个过程中，我们浪费了宝贵的时间，增加了项目的复杂性，这一点我们将贯穿项目的整个生命周期。</p>
+<p>​     
+        <img class="mx-auto" alt="b9a0143f87b629038d379c329fafb705" src="https://habby-1255443925.cos.ap-chongqing.myqcloud.com/uPic/2022-02-23/b9a0143f87b629038d379c329fafb705-0942.jpeg" />   
+    
+        <img class="mx-auto" alt="" src="" />   
+    </p>
+<p>一般问题</p>
+<p>过度设计的另一个原因往往是<strong>缺乏经验</strong>。一般而言，你的资历越深，就越不容易过度设计，因为你已经经历过大量的人为复杂性的情况。</p>
+<p>关于工程师经验的学习曲线通常遵循与此非常相似的模式：</p>
+<ol>
+<li>你从一个简单的方式开始编程。</li>
+<li>你找到了像面向对象这样的范例，并与潮流相结合。</li>
+<li>你阅读了有关设计模式的文章，并在各种情况下寻找实现它们的机会。</li>
+<li>经过数年不必要的复杂性之后，你又回到了编写简单的代码。</li>
+</ol>
+<p>
+        <img class="mx-auto" alt="c458864a6cde07829e45a526817df319" src="https://habby-1255443925.cos.ap-chongqing.myqcloud.com/uPic/2022-02-23/c458864a6cde07829e45a526817df319-0942.jpeg" />   
+    </p>
+<p>代码复杂性与经验</p>
+<p><strong>界定宽松的需求</strong>也会加剧这一问题。假如一个工程师没有一个明确界定的问题，他就会倾向于过度设计来避免不确定性。</p>
+<p><strong>无聊</strong>同样也会导致过度设计。假如一个工程师没有激动人心的挑战要面对，他很可能只是尝试了一些新事物，最终使问题复杂化。</p>
+<p><strong>过度设计的后果</strong></p>
+<p>在文章一开始，我就提到过度设计将扼杀初创公司，我并不是在开玩笑。对于任何系统，它有两种特别的反常影响。</p>
+<p>一方面，这<strong>会增加开发成本</strong>。假如我们的工程师不选择最简单的解决方案来解决一个问题，我们的时间和金钱成本将会增加，让我们无法更快地完成迭代。请观看 Lisa Vigar 的 MTP Hamburg 演讲《<a href="https://www.mindtheproduct.com/iterating-your-voice-product-by-lisa-vigar/">语音产品的迭代</a>》（<em>Iterating Your Voice Product</em>）。</p>
+<p>另一方面，这也<strong>会增加维护成本</strong>。简单的代码更易于编程、测试和修改。随着复杂度的增加，复杂性会以指数级增长，影响迭代速度。</p>
+<p>因此，我重申了自己的论点，过度设计将扼杀产品。远不止缺乏良好的工程实践。之所以如此，这是因为要从良好的实践中获益，你需要有<a href="https://www.mindtheproduct.com/category/productmarket-fit/">产品与市场的契合度</a>，而过度设计会使你首先无法得到它。</p>
+<p><strong>过度设计的例子</strong></p>
+<p>第一个想到的是<strong>基于微服务的架构</strong>。在几年前，它们像浪潮一样涌来，它们应该比它们所集成的项目还要多。</p>
+<p>我把它们作为过度设计的一个例子，因为它们在 99% 的情况下都是没有必要的，特别是对于那些必须找到市场契合点的初创公司来说，更直接地使用诸如<a href="https://m.signalvnoise.com/the-majestic-monolith/">“雄伟的”单体</a>架构模式会带来很多好处。</p>
+<p>假如你成功地找到了市场契合点，结果发现，由于规模问题，你最终需要切换到微服务，哦，天呐，这是个好问题。</p>
+<p><strong>过早的优化</strong>往往是另一个过度设计的典型例子。一个常见的情况是，当你还没有用户时，就准备在一个过于复杂的基础设施设置中吸收大量流量的系统。多数情况下，你只需要在单一服务器上运行单体应用，就可以验证你的业务模式。</p>
+<p>过早优化的一个最糟糕的例子就是，我们花费了大量的时间来设计一个系统，以避免将来重复自己的工作，而放弃已完成的部分工作。</p>
+<p>如果你以前因为破产而从来没有看到过它的工作，那么你的设计或实现有多么完美，都无关紧要了。即使是这个星球上最糟糕的代码，帮助你验证一个假设，总好过因为害怕不重复自己的工作而停滞不前。</p>
+<p>和上面提到的一样，软件重写是一个明显的过度设计的例子。通常情况下，工程师并不喜欢在遗留的代码库上工作。他们的自然倾向是一切从头做开始。但是，就像 20 多年前 Joel Spolski 在《<a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">你永远不应该做的事</a>》(<em>Things you should never do</em>) 中写道，重写很少能达到目的，甚至会夺走你的生意。</p>
+<p>显然，这是显而易见的，但是你的客户并不关心你的系统在内部有多好。你的客户关心的是，你是否帮助他解决了问题。没有给予他们价值而投入的每一分钟都是浪费的一分钟。</p>
+<p><strong>如何避免过度设计</strong></p>
+<p>在我看来，避免过度设计的最好方法是<strong>让你的工程师成为真正的产品工程师</strong>。</p>
+<p>为了实现这一目标，我们可以让他们参与日常业务，在每项举措之后解释为什么，并将其与对组织及其愿景重要的指标联系起来。</p>
+<p>观看 <a href="https://www.mindtheproduct.com/metrics-that-matter-live-panel/">MTP 小组讨论</a>，以进一步了解定义<a href="https://www.mindtheproduct.com/metrics-that-matter-live-panel/">重要指标</a>的重要性。</p>
+<p>我们需要让他们和用户更紧密地联系在一起，邀请他们与我们的用户进行访谈和发现会议。你希望你的团队能够与你的用户的问题产生紧密的共鸣，从而使他们能够迅速地放弃那些不能最有效解决问题的工程措施。</p>
+<p>假如你只是把工程团队看作是一个生产链资源，它唯一的任务就是从积压的工作中实现用户描述，那么就不要指望他们能有动力避免复杂性。他们需要了解每一个决策背后的原因。</p>
+<p>与此相关，<strong>正确定义问题来减少模糊性</strong>。工程师需要知道原因，但是他们也需要知道预期的是什么。你越能缩小问题的范围，他们保护自己不受过度设计解决方案影响的理由就越少。定义一个系统的期望的好方法是通过使用 <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos">SLI 和 SLO</a> 的服务目标。</p>
+<p>在任何公司里，工程师都是最有创造性的人。当你的团队相信你的标准时，他们的日常想法或主动性就会显现出来，这可能表明他们是在考虑将来的“假设”场景。如果你有这样的直觉，<strong>问问自己：这对解决当前用户的问题有什么帮助？要是我们现在不干呢</strong>？他们的回答会帮助你辨别这是否是一种过度设计的情况。</p>
+<p>最后，更多的是面向创始人，优先聘用已经在产品公司有一定经验的高级工程师。寻找“战争创伤”的面试。询问他们最痛苦的经历以及他们是如何应对的。坚持聘用那些把用户和简单性放在简单的技术解决方案之前的人。</p>
+<p><strong>避免过度设计的心智模式</strong></p>
+<p><strong>YAGNI</strong></p>
+<p>在业界中，过度设计的问题很普遍，工程师们自己就用了一个术语来指代添加代码“以防万一”的情况：<strong>YAGNI</strong>，就是“你不会需要它”（<em>You are not going to need it</em>）的首字母缩写。</p>
+<p>YAGNI 试图阻止你添加任何在解决你所面临的问题上并非绝对必要的内容，因为事实是，最有可能的是，“你不会需要它”。</p>
+<p><strong>KISS</strong></p>
+<p>KISS 一词，也就是“保持简单直白”（<em>Keep it simple stupid</em>）的首字母缩写，是指更加易于对简单系统进行修复、开发和维护。所以，简单性应该成为任何设计的目标之一，避免任何不必要的复杂性。</p>
+<p><strong>更糟就是更好</strong></p>
+<p>“更糟就是更好”，我们要强调的是，拥有更少的选择比拥有更多的选择更可取。之所以这样，是因为它可以简化我们产品的使用，使其在更广阔的市场范围内具有吸引力。</p>
+<p>换句话说，它鼓励我们保持产品的最低限度的基本功能，避免增加“脂肪”，以免增加产品的复杂性。</p>
+<p><strong>总结</strong></p>
+<p>总结一下，过度设计有可能摧毁你的初创公司，它可能：</p>
+<ul>
+<li>增加不必要的复杂性。</li>
+<li>增加开发和维护成本。</li>
+<li>降低你的迭代速度。</li>
+<li>使你无法适应市场。</li>
+</ul>
+<p>遗憾的是，过度设计并非例外；它是常态。出于这个原因，了解其中所包含的内容非常重要，并且努力避免这种情况的发生，首先要让你的工程师参与进来，解决客户的实际问题。</p>
+<p>在没有解决客户实际问题的开发中，我们投入的每一分钟都是一种浪费。不要掉进““以防万一”的陷阱。</p>
+<p>墓地里充斥了设计精巧的初创公司和产品，可以扩展到数以百万计的用户，而这些用户从来没有得到过一丁点儿的关注。别成为他们中的一员。</p>
+<p><strong>作者介绍：</strong></p>
+<p>Simón Muñoz，一位西班牙富有激情的产品经理，拥有创业背景和软件工程教育背景，并曾在多家技术公司工作 20 多年，积累了丰富的管理经验。现在在 VoiceMod 工作，开始执行一项为每个人提供 Sonic 身份的任务。</p>
+<p><strong>原文链接：</strong></p>
+<p><a href="https://www.mindtheproduct.com/overengineering-can-kill-your-product/">https://www.mindtheproduct.com/overengineering-can-kill-your-product/</a></p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://9136347.com">habby chen</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1%E4%BC%9A%E6%89%BC%E6%9D%80%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81/">https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1%E4%BC%9A%E6%89%BC%E6%9D%80%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC-BY-NC-ND</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/%E6%9E%B6%E6%9E%84/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/">API网关的适用场景</a></li>
+        
+        <li><a href="/golang/kratos%E4%B8%ADinternal%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E7%9A%84%E4%BD%9C%E7%94%A8%E8%AF%B4%E6%98%8E/">kratos中internal目录结构的作用说明</a></li>
+        
+        <li><a href="/%E9%9A%8F%E7%AC%94/Hugo%E7%BE%8E%E5%8C%96url/">Hugo美化url</a></li>
+        
+        <li><a href="/%E9%9A%8F%E7%AC%94/%E6%8E%88%E6%9D%83%E5%8D%8F%E8%AE%AE/">授权协议</a></li>
+        
+        <li><a href="/about/">关于</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1'>架构设计</a></li>
+                
+                <li><a href='/tags/%E8%BF%87%E5%BA%A6%E6%9E%B6%E6%9E%84'>过度架构</a></li>
+                
+                <li><a href='/tags/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1'>过度设计</a></li>
+                
+                <li><a href='/tags/%E6%9E%B6%E6%9E%84%E5%8E%9F%E5%88%99'>架构原则</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2022 <a href="https://9136347.com">habbychen的技术笔记 By habby chen</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src="https://cdn.staticfile.org/mathjax/2.7.5/config/TeX-MML-AM_CHTML.js"></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+                </div>
+
+                <div id="secondary">
+
+
+
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1%E4%BC%9A%E6%89%BC%E6%9D%80%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81/" title="过度设计会扼杀你的产品">过度设计会扼杀你的产品</a>
+    </li>
+    
+    <li>
+        <a href="https://9136347.com/%E6%9E%B6%E6%9E%84/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/" title="API网关的适用场景">API网关的适用场景</a>
+    </li>
+    
+    <li>
+        <a href="https://9136347.com/golang/kratos%E4%B8%ADinternal%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E7%9A%84%E4%BD%9C%E7%94%A8%E8%AF%B4%E6%98%8E/" title="kratos中internal目录结构的作用说明">kratos中internal目录结构的作用说明</a>
+    </li>
+    
+    <li>
+        <a href="https://9136347.com/%E9%9A%8F%E7%AC%94/Hugo%E7%BE%8E%E5%8C%96url/" title="Hugo美化url">Hugo美化url</a>
+    </li>
+    
+    <li>
+        <a href="https://9136347.com/%E9%9A%8F%E7%AC%94/%E6%8E%88%E6%9D%83%E5%8D%8F%E8%AE%AE/" title="授权协议">授权协议</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://9136347.com/categories/golang/">golang (1)</a></li>
+    
+    <li><a href="https://9136347.com/categories/%E6%9E%B6%E6%9E%84/">架构 (1)</a></li>
+    
+    <li><a href="https://9136347.com/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计 (1)</a></li>
+    
+    <li><a href="https://9136347.com/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://9136347.com/tags/apisix/">apisix</a>
+    
+    <a href="https://9136347.com/tags/golang/">golang</a>
+    
+    <a href="https://9136347.com/tags/hugo/">hugo</a>
+    
+    <a href="https://9136347.com/tags/%E5%85%B3%E4%BA%8E%E6%88%91/">关于我</a>
+    
+    <a href="https://9136347.com/tags/%E6%8E%88%E6%9D%83%E5%8D%8F%E8%AE%AE/">授权协议</a>
+    
+    <a href="https://9136347.com/tags/%E6%9E%B6%E6%9E%84/">架构</a>
+    
+    <a href="https://9136347.com/tags/%E6%9E%B6%E6%9E%84%E5%8E%9F%E5%88%99/">架构原则</a>
+    
+    <a href="https://9136347.com/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a>
+    
+    <a href="https://9136347.com/tags/%E7%BD%91%E5%85%B3%E5%88%86%E6%B5%81/">网关分流</a>
+    
+    <a href="https://9136347.com/tags/%E7%BD%91%E5%85%B3%E8%AE%A4%E8%AF%81/">网关认证</a>
+    
+    <a href="https://9136347.com/tags/%E7%BD%91%E5%85%B3%E9%89%B4%E6%9D%83/">网关鉴权</a>
+    
+    <a href="https://9136347.com/tags/%E8%BF%87%E5%BA%A6%E6%9E%B6%E6%9E%84/">过度架构</a>
+    
+    <a href="https://9136347.com/tags/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1/">过度设计</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.habby.top" title="我的blog">我的blog</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://github.com/HabbyChen" title="habbychen的github">github</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://9136347.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

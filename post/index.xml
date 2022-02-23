@@ -6,7 +6,16 @@
     <description>Recent content in Posts on habbychen的技术笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Feb 2022 16:05:27 +0800</lastBuildDate><atom:link href="https://9136347.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 09:39:53 +0800</lastBuildDate><atom:link href="https://9136347.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>过度设计会扼杀你的产品</title>
+      <link>https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1%E4%BC%9A%E6%89%BC%E6%9D%80%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81/</link>
+      <pubDate>Wed, 23 Feb 2022 09:39:53 +0800</pubDate>
+      
+      <guid>https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1%E4%BC%9A%E6%89%BC%E6%9D%80%E4%BD%A0%E7%9A%84%E4%BA%A7%E5%93%81/</guid>
+      <description>原文:https://www.infoq.cn/article/prA7KSYtE7YVuralm19g 本文不只针对产品经理。创始人、投资者，或者任何其他在任何数字产品或服务方面有足够关系的人都可以利用本文的观点。 我相信这一点，因为我们将讨论创建产品时最普遍的问题之一：过度设计产品。依我看，过度设计要比缺乏良好的开发实践扼杀更多的产品。 在讨论详细情况之前，让我来介绍一下我的背景。当上产品经理之前，我是个工程师。实际上，我受过计算机科学的</description>
+    </item>
+    
     <item>
       <title>API网关的适用场景</title>
       <link>https://9136347.com/%E6%9E%B6%E6%9E%84/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</link>
