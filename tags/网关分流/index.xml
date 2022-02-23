@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 18 Feb 2022 16:05:27 +0800</lastBuildDate><atom:link href="https://9136347.com/tags/%E7%BD%91%E5%85%B3%E5%88%86%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API网关的适用场景</title>
-      <link>https://9136347.com/%E6%9E%B6%E6%9E%84/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</link>
+      <link>https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</link>
       <pubDate>Fri, 18 Feb 2022 16:05:27 +0800</pubDate>
       
-      <guid>https://9136347.com/%E6%9E%B6%E6%9E%84/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</guid>
+      <guid>https://9136347.com/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/API%E7%BD%91%E5%85%B3%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</guid>
       <description>在 https://v2ex.com/t/794757 有个问题： “API 网关到底适用于什么场景？” “类似 KONG APISIX 等，各种文档的说法基本都一致，作为后端服务（微服务）的流量入口，进行转发、鉴权、流控等等，看起来是一个跟业务系统相对独立的组建。 但是又想想，网关如果要做到认证、鉴权、流控等等，必须要跟业务深度绑定啊。拿认证鉴权来说，几乎每个主流网关都提供主流认证方式比如 http 、OAuth2 、JWT 等，可是看完后一脸懵逼，这有啥用？业务系统原本就有自己的用户体系啊，怎么结合起来呢？总不能让用户直接到网</description>
     </item>
     
