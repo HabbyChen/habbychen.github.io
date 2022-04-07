@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>一个中文编码引发的问题</title>
+      <link>https://9136347.com/golang/%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 18 Feb 2022 16:00:00 +0800</pubDate>
+      
+      <guid>https://9136347.com/golang/%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>⽉ 和 月 有啥不一样 最近和测试调试的时候遇到了一个问题，中文看起来一样，但是实际上你去搜索的时候，匹配不到。因为我们使用了中文编码来做日期的格式 比如“2022年04月07日18:00:22” 这个格式来匹配时间。 但是各种不对，就是匹配不到。 比如你在本文搜索 ⽉，只能搜索到 第二个月 但是搜索不到⽉ 白百思不得其解的时候，用unicode编码了一下第一个 月的编码是 \u2f49，第二个月是 \u6708，我勒个去。 经过和测试沟通，测试是在一个pdf中复制的</description>
+    </item>
+    
+    <item>
       <title>Hugo美化url</title>
       <link>https://9136347.com/%E9%9A%8F%E7%AC%94/Hugo%E7%BE%8E%E5%8C%96url/</link>
       <pubDate>Tue, 15 Feb 2022 17:08:52 +0800</pubDate>
@@ -50,6 +59,15 @@
       
       <guid>https://9136347.com/%E9%9A%8F%E7%AC%94/%E6%8E%88%E6%9D%83%E5%8D%8F%E8%AE%AE/</guid>
       <description>协议介绍 CC 协议主要用于文字或艺术类的创作内容上，而 GNU/BSD 许可证更广泛应用于软件及其源码方面。 * 关于 CC 协议不建议用于软件和代码的文章：知乎 – 为什么 GitHub 不支持 CC 协议(知识共享协议)？ CC 协议（Creative Commons License，知识共享协议） GNU GPL（GNU General Public Licence） GNU LGPL（GNU Lesser General Public Licence） BSD MIT Apache License 协议选择 文档、文章、艺术类 是否允许依据你的创作进行的再创作被分享？ A、是 B、否 C、是，只要在相同的授权条件下 是否允许你的创作应用</description>
+    </item>
+    
+    <item>
+      <title>随感</title>
+      <link>https://9136347.com/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E6%84%9F/</link>
+      <pubDate>Tue, 15 Feb 2022 17:08:52 +0800</pubDate>
+      
+      <guid>https://9136347.com/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E6%84%9F/</guid>
+      <description></description>
     </item>
     
   </channel>
