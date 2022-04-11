@@ -6,7 +6,16 @@
     <description>Recent content in golang on habbychen的技术笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Feb 2022 16:00:00 +0800</lastBuildDate><atom:link href="https://9136347.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Apr 2022 17:08:52 +0800</lastBuildDate><atom:link href="https://9136347.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一个中文编码引发的问题</title>
+      <link>https://9136347.com/golang/%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 06 Apr 2022 17:08:52 +0800</pubDate>
+      
+      <guid>https://9136347.com/golang/%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>⽉ 和 月 有啥不一样 最近和测试调试的时候遇到了一个问题，中文看起来一样，但是实际上你去搜索的时候，匹配不到。因为我们使用了中文编码来做日期的格式 比如“2022年04月07日18:00:22” 这个格式来匹配时间。 但是各种不对，就是匹配不到。 比如你在本文搜索 ⽉，只能搜索到 第二个月 但是搜索不到⽉ 白百思不得其解的时候，用unicode编码了一下第一个 月的编码是 \u2f49，第二个月是 \u6708，我勒个去。 经过和测试沟通，测试是在一个pdf中复制的</description>
+    </item>
+    
     <item>
       <title>kratos中internal目录结构的作用说明</title>
       <link>https://9136347.com/golang/kratos%E4%B8%ADinternal%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E7%9A%84%E4%BD%9C%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
@@ -14,15 +23,6 @@
       
       <guid>https://9136347.com/golang/kratos%E4%B8%ADinternal%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E7%9A%84%E4%BD%9C%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
       <description>一致一来对kratos中internal里面的biz啊，data目录的作用不是特别了解 在网上不知道什么时候找到一张图，我觉得分析的比较透彻。</description>
-    </item>
-    
-    <item>
-      <title>一个中文编码引发的问题</title>
-      <link>https://9136347.com/golang/%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://9136347.com/golang/%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>⽉ 和 月 有啥不一样 最近和测试调试的时候遇到了一个问题，中文看起来一样，但是实际上你去搜索的时候，匹配不到。因为我们使用了中文编码来做日期的格式 比如“2022年04月07日18:00:22” 这个格式来匹配时间。 但是各种不对，就是匹配不到。 比如你在本文搜索 ⽉，只能搜索到 第二个月 但是搜索不到⽉ 白百思不得其解的时候，用unicode编码了一下第一个 月的编码是 \u2f49，第二个月是 \u6708，我勒个去。 经过和测试沟通，测试是在一个pdf中复制的</description>
     </item>
     
   </channel>
